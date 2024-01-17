@@ -1,0 +1,30 @@
+nav {
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0px;
+  z-index: 9999;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+div span {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: larger;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.links {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  margin-right: 20px;
+}
