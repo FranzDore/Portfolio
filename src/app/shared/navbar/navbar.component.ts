@@ -6,13 +6,12 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-
   public textLogo: string = '<<FrancescoDore>>';
 
   public onLogoClick() {
-    scrollTo({top: 0, behavior: 'smooth'});
+    scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
