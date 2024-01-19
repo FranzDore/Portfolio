@@ -8,6 +8,9 @@
 :root {
   --white: #dedede;
   --black: #131313;
+  --nav-bg: #1f1f1f;
+  --pink-light: #ffdede;
+  --pink-dark: #be7c7c;
 }
 
 /* Global styles */
@@ -28,4 +31,21 @@ html {
 
 body {
   margin: 0;
+}
+
+/* THEMES */
+
+.pink {
+  color: var(--pink-dark);
+  background-color: var(--pink-light);
+}
+
+.dark {
+  color: var(--white);
+  background-color: #131313;
+}
+
+.light {
+  color: var(--black);
+  background-color: var(--white);
 }
