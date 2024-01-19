@@ -3,6 +3,12 @@
     <span>&lt;&lt;FrancescoDore&gt;&gt;</span>
   </div>
   <div class="links">
+    <select name="theme" id="theme" (change)="onThemeSelect($event)">
+      <option value="0" style="display: none;" [disabled]="true">Tema</option>
+      <option value="LIGHT" [class]="getTheme()">Chiaro</option>
+      <option value="DARK" [class]="getTheme()">Scuro</option>
+      <option value="PINK" [class]="getTheme()">Rosa</option>
+    </select>
     <a href="">Info e Bio</a>
     <a href="">Progetti</a>
     <a href="">Contatti</a>

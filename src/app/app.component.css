@@ -23,5 +23,13 @@
 
 .welcome p {
   padding-left: 5vw;
-  border-left: 1px solid white;
+  border-left: 2px solid white;
+}
+
+.welcome p.light {
+  border-left: 2px solid black;
+}
+
+.welcome p.pink {
+  border-left: 2px solid var(--pink-dark);
 }

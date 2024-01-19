@@ -1,5 +1,4 @@
 nav {
-  background-color: rgb(31, 31, 31);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,4 +26,10 @@ div span {
   column-gap: 30px;
   justify-content: center;
   margin-right: 20px;
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
