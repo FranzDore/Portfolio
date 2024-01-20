@@ -2,9 +2,18 @@
   <div id="logo" (click)="onLogoClick()">
     <span>&lt;&lt;FrancescoDore&gt;&gt;</span>
   </div>
-  <div class="links">
+  <i
+    class="fa-solid"
+    [ngClass]="{
+      'fa-xmark': isMenuShown,
+      'fa-bars': !isMenuShown
+    }"
+    (click)="toggleMenu()"
+  ></i>
+  <div class="links dark">
+
     <select name="theme" id="theme" (change)="onThemeSelect($event)">
-      <option value="0" style="display: none;" [disabled]="true">Tema</option>
+      <option value="0" style="display: none" [disabled]="true">Tema</option>
       <option value="LIGHT" [class]="getTheme()">Chiaro</option>
       <option value="DARK" [class]="getTheme()">Scuro</option>
       <option value="PINK" [class]="getTheme()">Rosa</option>
@@ -14,3 +23,15 @@
     <a href="">Contatti</a>
   </div>
 </nav>
+<div class="links-menu dark" [ngStyle]="{'display': isMenuShown ? 'flex' : 'none'}">
+
+  <select name="theme" id="theme" (change)="onThemeSelect($event)">
+    <option value="0" style="display: none" [disabled]="true">Tema</option>
+    <option value="LIGHT" [class]="getTheme()">Chiaro</option>
+    <option value="DARK" [class]="getTheme()">Scuro</option>
+    <option value="PINK" [class]="getTheme()">Rosa</option>
+  </select>
+  <a href="">Info e Bio</a>
+  <a href="">Progetti</a>
+  <a href="">Contatti</a>
+</div>

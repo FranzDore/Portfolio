@@ -12,6 +12,8 @@ import { ThemeService } from '../../services/theme.service';
 export class NavbarComponent {
   private currentTheme: string = 'dark';
 
+  public isMenuShown: boolean = false;
+
   constructor(private themeService: ThemeService) {}
 
   public onLogoClick(): void {
@@ -19,7 +21,7 @@ export class NavbarComponent {
   }
 
   public onThemeSelect(event: any): void {
-    console.log('Change detected in Navbar Select')
+    console.log('Change detected in Navbar Select');
     const chosenTheme = (event.target.value as string).toLowerCase();
     localStorage.setItem('theme', chosenTheme);
     this.currentTheme = chosenTheme;
@@ -27,14 +29,17 @@ export class NavbarComponent {
   }
 
   private changeTheme() {
-    const allElements = Array.from(document.querySelectorAll('*'));
-    allElements.forEach((el) => {
+    Array.from(document.querySelectorAll('*')).forEach((el: Element) => {
       el.classList.remove(...this.themeService.getThemes());
       el.classList.add(this.currentTheme);
     });
   }
 
   public getTheme(): string {
-    return this.currentTheme
+    return this.currentTheme;
+  }
+
+  public toggleMenu(): void {
+    this.isMenuShown = !this.isMenuShown;
   }
 }

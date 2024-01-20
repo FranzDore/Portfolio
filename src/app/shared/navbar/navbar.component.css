@@ -21,8 +21,9 @@ nav.pink {
   border-bottom: 1px solid var(--pink-dark);
 }
 
-nav a {
+a {
   text-decoration: none;
+  padding: 8px 0px;
 }
 
 div span {
@@ -34,14 +35,58 @@ div span {
 }
 
 .links {
-  display: flex;
+  display: none;
   column-gap: 30px;
   justify-content: center;
-  margin-right: 20px;
+  align-items: center;
+  margin-right: 3vw;
+}
+
+.links-menu {
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  column-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--white);
+}
+
+.links-menu.light{
+  border-bottom: 2px solid var(--black);
+}
+
+.links-menu.dark{
+  border-bottom: 2px solid var(--white);
+}
+
+.links-menu.pink{
+  border-bottom: 2px solid var(--pink-dark);
 }
 
 select {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  font-size: medium;
+  padding-top: 6px;
+  padding-bottom: 3px;
+}
+
+.fa-solid {
+  margin-right: 3vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .fa-solid {
+    display: none;
+  }
+
+  .links-menu {
+    display: none !important;
+  }
+
+  .links {
+    display: flex;
+  }
 }
