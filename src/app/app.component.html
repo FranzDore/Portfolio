@@ -1,32 +1,35 @@
 <app-navbar></app-navbar>
-<main style="margin-top: 45px">
-  <div class="flex-col">
-    <app-welcome></app-welcome>
-    <div class="text-center">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-    </div>
+<main class="flex-col" style="margin-top: 45px">
+  <app-welcome></app-welcome>
+
+  <section class="flex-row">
+    <app-project-card *ngFor="let item of projects; index as i" [project]="projects[i]"></app-project-card>
+  </section>
+
+  <div class="text-center">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
   </div>
 </main>
 <router-outlet></router-outlet>
